@@ -2,9 +2,9 @@
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 
-export default function EditApplication() {
+function EditApplicationContent() {
      const router = useRouter();
     const searchParams = useSearchParams();
     const index = searchParams.get("index");
@@ -207,5 +207,12 @@ export default function EditApplication() {
                 </button>
             </div>
         </main>
+    );
+}
+export default function EditApplication() {
+    return (
+        <Suspense fallback={<p>Loading...</p>}>
+            <EditApplicationContent />
+        </Suspense>
     );
 }
