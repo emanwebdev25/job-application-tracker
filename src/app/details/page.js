@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { useEffect, useState } from "react";
-export default function Details() {
+function DetailsContent() {
     const searchParams = useSearchParams();
     const index = searchParams.get("index");
     const [application, setApplication] = useState(null);
@@ -90,5 +91,12 @@ export default function Details() {
                 </div>
             </div>
         </main>
+    );
+}
+export default function Details() {
+    return (
+        <Suspense fallback={<p>Loading...</p>}>
+            <DetailsContent />
+        </Suspense>
     );
 }
