@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 export default function AddApplication() {
@@ -40,18 +41,24 @@ export default function AddApplication() {
     return (
         <main className="min-h-screen bg-[#111111] px-8 py-10 text-[#f5f2e8]">
             <div className="mx-auto max-w-3xl">
+                <Link
+                    href="/"
+                    className="mb-8 inline-flex items-center border border-[#2b2b2b] px-3 py-2 text-xs text-[#a7a49b] transition-all duration-300 hover:border-lime-400 hover:text-lime-400"
+                >
+                    ← Back to applications
+                </Link>
                 <p className="text-sm uppercase tracking-[0.3em] text-lime-400">
                     New opportunity
                 </p>
 
-                <h1 className="mt-3 text-4xl font-semibold tracking-tight">
+                <h1 className="mt-3 text-5xl font-semibold tracking-tight">
                     Add application
                 </h1>
 
                 <p className="mt-3 text-[#77746c]">
                     Add a new opportunity to your career pipeline.
                 </p>
-                <div className="mt-10">
+                <div className="mt-8">
                     <label className="text-sm text-[#a7a49b]">
                         Company
                     </label>
@@ -170,7 +177,7 @@ export default function AddApplication() {
                 <button
                     type="button"
                     onClick={handleSubmit}
-                    className="mt-8 w-full bg-lime-400 px-5 py-3 font-medium text-[#111111] transition-all duration-300 hover:-translate-y-0.5 hover:bg-lime-300"
+                    className="mt-8 w-full bg-lime-400 px-5 py-3 text-sm font-medium text-[#111111] transition-all duration-300 hover:-translate-y-0.5 hover:bg-lime-300"
                 >
                     Save application
                 </button>

@@ -50,11 +50,11 @@ function DetailsContent() {
                         <p className="text-xs uppercase tracking-widest text-[#77746c]">
                             Status
                         </p>
-                        <p className="mt-2 text-sm text-lime-400">
+                        <span className="mt-2 inline-flex border border-lime-400/30 bg-lime-400/10 px-3 py-1 text-[10px] font-medium uppercase tracking-widest text-lime-400">
                             {application?.status}
-                        </p>
+                        </span>
                     </div>
-                    <div className="mt-4 border border-[#2b2b2b] p-5">
+                    <div className="border border-[#2b2b2b] p-5">
                         <p className="text-xs uppercase tracking-widest text-[#77746c]">
                             Application date
                         </p>
@@ -63,7 +63,7 @@ function DetailsContent() {
                             {application?.applicationDate}
                         </p>
                     </div>
-                    <div className="mt-4 border border-[#2b2b2b] p-5">
+                    <div className="border border-[#2b2b2b] p-5">
                         <p className="text-xs uppercase tracking-widest text-[#77746c]">
                             Notes
                         </p>
@@ -77,14 +77,14 @@ function DetailsContent() {
                             href={application.jobLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-6 inline-block text-sm text-lime-400 transition-colors hover:text-lime-300"
+                            className="mt-8 inline-flex min-w-40 items-center justify-center border border-lime-400/40 px-5 py-3 text-sm text-lime-400 transition-all duration-300 hover:border-lime-400 hover:bg-lime-400/10"
                         >
                             Open job posting ↗
                         </a>
                     )}
                     <Link
                         href={`/edit?index=${index}`}
-                        className="mt-8 inline-block border border-[#2b2b2b] px-5 py-3 text-sm transition-all duration-300 hover:border-lime-400 hover:text-lime-400"
+                        className="mt-8 inline-block bg-lime-400 px-5 py-3 text-sm font-medium text-[#111111] transition-all duration-300 hover:-translate-y-0.5 hover:bg-lime-300"
                     >
                         Edit application
                     </Link>
