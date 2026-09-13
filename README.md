@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Job Application Tracker
+
+A modern frontend application for organizing and tracking job applications from discovery to offer.
+
+## Features
+
+* Add new job applications
+* Edit existing applications
+* Delete applications
+* Track application status
+* Search by company or job title
+* Filter applications by status
+* View detailed application information
+* Store data with LocalStorage
+* Responsive design for desktop and mobile
+* Deployed with Vercel
+
+## Application Stages
+
+* Discovered
+* Applied
+* Screening
+* Interview
+* Offer
+
+## Tech Stack
+
+* Next.js
+* React
+* JavaScript
+* Tailwind CSS
+* LocalStorage
+* Vercel
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository:
+
+```bash
+git clone https://github.com/emanwebdev25/job-application-tracker.git
+cd job-application-tracker
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+src/
+└── app/
+    ├── components/
+    │   └── Pipeline.jsx
+    ├── add/
+    │   └── page.js
+    ├── details/
+    │   └── page.js
+    ├── edit/
+    │   └── page.js
+    └── page.js
+```
 
-## Learn More
+## Data Storage
 
-To learn more about Next.js, take a look at the following resources:
+Application data is stored locally in the browser using `localStorage`. No backend or database is required.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project is deployed on Vercel and connected to the GitHub repository for automatic deployments.
 
-## Deploy on Vercel
+## What I Practiced
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Building with Next.js App Router
+* React state management
+* Client-side data persistence
+* URL query parameters
+* CRUD functionality
+* Search and filtering
+* Responsive UI design
+* Production deployment with Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
